@@ -146,6 +146,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
                 lastCapturedCode = metadataObj.stringValue
+                barcodeScanned!(metadataObj.stringValue)
             }
         }
     }
